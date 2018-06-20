@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+html,body{
+    position: relative;
+    height: 100%;
+}
+.gallery{
+    height: 100%;
+    perspective: 2000px;
+}
+.gallery_list{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    border: 1px dashed #333;
+    transform-style: preserve-3d;
+    animation: spin 9s infinite;
+}
+.panel{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    white-space: nowrap;
+}
+.panel:nth-child(1){
+    background-color: red;
+    transform: translateZ(412.12px);
+}
+.panel:nth-child(2){
+    background-color: orange;
+    transform: rotateY(40deg) translateZ(412.12px);
+}
+.panel:nth-child(3){
+    background-color: green;
+    transform: rotateY(80deg) translateZ(412.12px);
+}
+.panel:nth-child(4){
+    background-color: blue;
+    transform: rotateY(120deg) translateZ(412.12px);
+}
+.panel:nth-child(5){
+    background-color: navy;
+    transform: rotateY(160deg) translateZ(412.12px);
+}
+.panel:nth-child(6){
+    background-color: purple;
+    transform: rotateY(200deg) translateZ(412.12px);
+}
+.panel:nth-child(7){
+    background-color: deeppink;
+    transform: rotateY(240deg) translateZ(412.12px);
+}
+.panel:nth-child(8){
+    background-color: aquamarine;
+    transform: rotateY(280deg) translateZ(412.12px);
+}
+.panel:nth-child(9){
+    background-color: darkcyan;
+    transform: rotateY(320deg) translateZ(412.12px);
+}
+.panel:after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.panel img{
+    vertical-align: middle;
+}
+@keyframes spin{
+    0%,11.11%{
+        transform: rotateY(0deg);
+    }
+    11.11%,22.22%{
+        transform: rotateY(-40deg);
+    }
+    22.22%,33.33%{
+        transform: rotateY(-80deg);
+    }
+    33.33%,44.44%{
+        transform: rotateY(-120deg);
+    }
+    44.44%,55.55%{
+        transform: rotateY(-160deg);
+    }
+    55.55%,66.66%{
+        transform: rotateY(-200deg);
+    }
+    66.66%,77.77%{
+        transform: rotateY(-240deg);
+    }
+    77.77%,88.88%{
+        transform: rotateY(-280deg);
+    }
+    88.88%,99.99%{
+        transform: rotateY(-320deg);
+    }
+    99.99%,100%{
+        transform: rotateY(-360deg);
+    }
+}
